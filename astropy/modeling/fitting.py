@@ -2126,8 +2126,8 @@ def _convert_input(x, y, z=None, n_models=1, model_set_axis=0):
             data_shape = z.shape[:model_set_axis] + z.shape[model_set_axis + 1 :]
 
     if z is None:
-        if data_shape != x.shape:
-            raise ValueError("x and y should have the same shape")
+        # if data_shape != x.shape:
+        #     raise ValueError("x and y should have the same shape")
         farg = (x, y)
     else:
         if not (x.shape == y.shape == data_shape):
